@@ -1,6 +1,70 @@
-@import '@/assets/scss/_colors.scss';
+@import "@/assets/scss/_colors.scss";
+
+:root{
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem; 
+}
+
+:root{
+    --header-height: 3rem;
+    --font-semi: 600;
+}
+
+:root{
+    --header-height: 3rem;
+    --font-semi: 600;
+}
 
 
-h1{
-    color: $color3;
+h1 {
+    color: $preto;
+}
+
+.bd-grid {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+}
+
+.home__buttons{
+    margin-top: var(--mb-2);
+    margin: 0 auto;
+    height: var(--header-height);
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    font-weight: var(--font-semi);
+    
+}
+
+.home__form{
+    background-color: rebeccapurple;
+    // margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    // width: 6em
+}
+
+.home__container {
+    // margin: 0 auto;
+    align-items: center;
+    background-color: red;
+    align-items:  center;
+    font-weight: var(--font-semi);
+}
+
+.home__img{
+    // background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+
 }
