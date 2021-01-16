@@ -7,15 +7,17 @@
       </div>
       <div class="home__form">
         <div class="home__buttons">
-          <input type="text" />
+          <input class="home-input" type="text" placeholder="pesquisar..."/>
         </div>
         <div class="home__buttons">
-          <button class="btn-home" type="button" onclick="">Ver Todos</button>
-          <button class="btn-home" type="button" onclick="">Buscar</button>
+          <button class="btn-home" id="todos" type="button" onclick="">Ver Todos</button>
+          <button class="btn-home" id="buscar" type="button" onclick="">Buscar</button>
         </div>
       </div>
     </div>
+    <router-link to="/users">Ir para users</router-link>
   </section>
+  
 </template>
 
 <script>

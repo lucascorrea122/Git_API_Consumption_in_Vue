@@ -1,0 +1,25 @@
+.users__header{
+    display: inline;   
+}
+
+.users__header span{
+    font-size: 18px;
+}
+
+.header-icon{
+    margin-right: 15px;
+}
+
+.users__container{
+    justify-items: center;
+    
+    display: grid;
+}
+
+.users__container .users-input{
+    width: 273px;
+    height: 35px;
+    border: 1px solid; 
+    border-radius: 5px;
+    border-color: #90A4AE;
+}
