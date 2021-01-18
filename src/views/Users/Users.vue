@@ -52,7 +52,7 @@ function queryGithubAPI(username) {
     `https://api.github.com/search/users?q=${username}&page=${page}&per_page=10`,
     {
       headers: {
-        authorization: "token 274b90d9b90e084f99727ee003425938f68513d2",
+        authorization: "token f8ca344c9825c4b94a29b19f061734476983fa27",
       },
     }
   ).then((response) => response.json());
