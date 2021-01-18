@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home/Home.vue'
 import Users from './views/Users/Users.vue'
-// import Profile from './views/Profile/Profile.vue'
+import Profile from './views/Profile/Profile.vue'
 
 Vue.use(Router);
 
@@ -18,6 +18,11 @@ export default new Router({
             path: '/users',
             name: 'users',
             component: Users
+        },
+        {
+            path: '/profile',
+            name: 'profile',
+            component: Profile,
         }
     ]    
 
