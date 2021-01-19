@@ -1,3 +1,7 @@
+body {
+    width: 100%;
+    margin: 0px;
+}
 .profile__image {
     width: 120px;
     height: 120px;
@@ -13,6 +17,12 @@
     // display:-moz-grid;
     display: grid;
     justify-items: center;
+    z-index: -2;
+}
+
+.back {
+    background-image: url("../../assets/profile_header_image.jpg");
+    z-index: 1;
 }
 
 // .user-user{
@@ -72,28 +82,125 @@
     font-weight: 600;
     line-height: 20px;
     color: #162668;
-    ;
 }
 
 .profile__tabs {
-    margin: 20px auto;
-    width: 1200px;
-    .tabs__choose {
-      margin-bottom: 0;
-      li {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #eee;
-        cursor: pointer;
-        opacity: 0.3;
-        &.active {
-          opacity: 1;
-        }
-      }
+    width: 100%;
+}
+
+.tabs__content {
+    padding: 20px;
+}
+
+.tabs__choose {
+    // background-color: #162668;
+    display: flex;
+    height: 50px;
+}
+
+.profile-tabs {
+    background-color: #f7f9fa;
+    display: grid;
+    justify-items: center;
+    width: 50%;
+    cursor: pointer;
+    &.active {
+        border-bottom: 3px solid #5c97d2;
     }
-    .tabs__content {
-      background-color: #eee;
-      margin: 0 auto;
-      padding: 20px;
-    }
-  }
+}
+
+.tabs-itens {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: black;
+}
+
+.profile-icon-stats {
+    color: #162668;
+}
+
+.profile-icon {
+    color: #90a4ae;
+    width: 10px;
+    height: 10px;
+}
+
+.profile-icons {
+    color: #162668;
+    width: 15px;
+    height: 15px;
+   
+}
+
+.profile__links {
+    margin-top: 30px;
+}
+
+.bio-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #162668;
+}
+
+.bio-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #263238;
+}
+
+.profile-city {
+    margin-top: 20px;
+}
+
+.profile-location{
+    margin-left: 13px;
+    font-size: 16px;
+    color: #162668;
+    font-weight: 600;
+    // line-height: 40px;
+}
+.profile-website{
+    margin-top: 10px;
+}
+
+.repos-title{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #0366D6;
+}
+
+.repos-description{
+    margin-top: 0px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #586069;
+}
+.repos-divider{
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    
+}
+
+.repos__cards{
+    // background-color: #5c97d2;
+}
+
+
+.repo-lang li{
+    margin-left: -15px;
+    font-size: 10px;
+    // font-weight: 600;
+    color: #586069;
+}
+// ul {
+//     list-style: none
+//   }
+  
+//   ul li:before {
+//     content: '\2022';
+//     size: 10px;
+//     color: #e74c3c /* cor da bolinha */
+//    }

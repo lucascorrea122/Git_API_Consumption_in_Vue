@@ -13,7 +13,7 @@
     <div class="users__group__container">
       <div v-for="repo in repos" :key="repo" id="app">
         <div class="users__cards">
-          <router-link to="/profile/user"><img class="users__image" :src="repo.avatar_url" alt="" /></router-link>
+          <router-link to="/profile"><img class="users__image" :src="repo.avatar_url" alt="" /></router-link>
           
           <h1 class="user-name">{{ repo.login }}</h1>
         </div>
@@ -52,7 +52,7 @@ function queryGithubAPI(username) {
     `https://api.github.com/search/users?q=${username}&page=${page}&per_page=10`,
     {
       headers: {
-        authorization: "token f8ca344c9825c4b94a29b19f061734476983fa27",
+        authorization: "token b60bdbbbd9b471ea66cdf7e234b5f4bf9f5f2c2b",
       },
     }
   ).then((response) => response.json());

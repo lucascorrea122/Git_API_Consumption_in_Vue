@@ -40,21 +40,21 @@
 <style lang="scss" scoped>
   .tabs {
     border-bottom: 1px solid #fefefe;
-    margin: 0 10px;
+    // margin: 0 10px;
   }
 
-  .tabs-details {
-    padding: 10px;
-  }
+  // .tabs-details {
+  //   padding: 10px;
+  // }
 
   ul {
     display: flex;
-    padding: 0;
-    list-style: none;
+    // padding: 0;
+    // list-style: none;
 
-    li {
-      margin-right: 40px;
-    }
+    // li {
+    //   margin-right: 40px;
+    // }
 
     .nav-item {
       cursor: pointer;

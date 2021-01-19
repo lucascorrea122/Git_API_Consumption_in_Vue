@@ -24,15 +24,6 @@ h1 {
     color: $preto;
 }
 
-.bd-grid {
-    max-width: 1024px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-column-gap: 2rem;
-    width: calc(100% - 2rem);
-    margin-left: var(--mb-2);
-    margin-right: var(--mb-2);
-}
 
 .home__buttons{
     margin-top: var(--mb-2);
@@ -78,19 +69,14 @@ h1 {
 }
 
 .home__form{
-    // background-color: rebeccapurple;
-    // margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
     width: 274px;
-    // width: 6em
-    // margin-top: 318px;
     
 }
 
 
 .home__container {
-    // background-color: red;
     font-weight: var(--font-semi);
     display: grid;
 }
