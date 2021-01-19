@@ -20,7 +20,7 @@ export default new Router({
             component: Users
         },
         {
-            path: '/profile',
+            path: '/profile/:data',
             name: 'profile',
             component: Profile,
         }

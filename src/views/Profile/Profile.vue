@@ -119,9 +119,13 @@
 <script>
 export default {
   name: "profile",
+  created(){
+    this.username= this.$route.params.data;
+    
+  },
   data() {
     return {
-      username: "yuryalencar",
+      username: "",
       id: "",
       user: [],
       login: "",
@@ -149,7 +153,7 @@ function getDadosUser(username) {
   //   return fetch(`https://api.github.com/users/${username}/repos`, {
   return fetch(`https://api.github.com/users/${username}`, {
     headers: {
-      authorization: "token b60bdbbbd9b471ea66cdf7e234b5f4bf9f5f2c2b",
+      authorization: "token 3f815dc5e244fc857e9a5ab27288519382072906",
     },
   }).then((response) => response.json());
 }
@@ -159,7 +163,7 @@ function getRepos(username) {
     `https://api.github.com/users/${username}/repos?page=1&per_page=8`,
     {
       headers: {
-        authorization: "token b60bdbbbd9b471ea66cdf7e234b5f4bf9f5f2c2b",
+        authorization: "token 3f815dc5e244fc857e9a5ab27288519382072906",
       },
     }
   ).then((response) => response.json());

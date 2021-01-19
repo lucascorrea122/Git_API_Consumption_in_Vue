@@ -13,8 +13,9 @@
     <div class="users__group__container">
       <div v-for="repo in repos" :key="repo" id="app">
         <div class="users__cards">
-          <router-link to="/profile"><img class="users__image" :src="repo.avatar_url" alt="" /></router-link>
-          
+          <a>
+            <img @click="shareData(repo.login)" class="users__image" :src="repo.avatar_url" alt=""/>]
+          </a>
           <h1 class="user-name">{{ repo.login }}</h1>
         </div>
         <hr class="user-divider" />
@@ -30,7 +31,7 @@ export default {
   el: "app",
   data() {
     return {
-      titulo: "ola mundo",
+      titulo: "yuryalencar",
       username: "",
       repos: [],
       count: "",
@@ -42,8 +43,10 @@ export default {
         this.repos = repos.items;
       });
     },
+    shareData(username) {
+      this.$router.push({ name: "profile", params: { data: username } });
+    },
   },
-
 };
 function queryGithubAPI(username) {
   const page = 1;
@@ -52,7 +55,7 @@ function queryGithubAPI(username) {
     `https://api.github.com/search/users?q=${username}&page=${page}&per_page=10`,
     {
       headers: {
-        authorization: "token b60bdbbbd9b471ea66cdf7e234b5f4bf9f5f2c2b",
+        authorization: "token 3f815dc5e244fc857e9a5ab27288519382072906",
       },
     }
   ).then((response) => response.json());
