@@ -13,8 +13,8 @@
     <div class="users__group__container">
       <div v-for="repo in repos" :key="repo" id="app">
         <div class="users__cards">
-          <a>
-            <img @click="shareData(repo.login)" class="users__image" :src="repo.avatar_url" alt=""/>]
+          <a href="">
+            <img @click="shareData(repo.login)" class="users__image" :src="repo.avatar_url" alt=""/>
           </a>
           <h1 class="user-name">{{ repo.login }}</h1>
         </div>
@@ -25,7 +25,10 @@
   <!-- v-for="repo in repos" :key="repo" -->
 </template>
 
+
 <script>
+
+import Functions from '../../services/global_functions';
 export default {
   name: "users",
   el: "app",
@@ -39,7 +42,7 @@ export default {
   },
   methods: {
     say: function () {
-      queryGithubAPI(this.username).then((repos) => {
+      Functions.getUsers(this.username).then((repos) => {
         this.repos = repos.items;
       });
     },
@@ -48,18 +51,7 @@ export default {
     },
   },
 };
-function queryGithubAPI(username) {
-  const page = 1;
-  //   return fetch(`https://api.github.com/users/${username}/repos`, {
-  return fetch(
-    `https://api.github.com/search/users?q=${username}&page=${page}&per_page=10`,
-    {
-      headers: {
-        authorization: "token 3f815dc5e244fc857e9a5ab27288519382072906",
-      },
-    }
-  ).then((response) => response.json());
-}
+
 </script>
 
 <style src="./style.scss" lang="scss"/>

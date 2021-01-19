@@ -117,6 +117,7 @@
 </template>
 
 <script>
+import Functions from '../../services/global_functions'
 export default {
   name: "profile",
   created(){
@@ -134,11 +135,12 @@ export default {
     };
   },
   beforeMount() {
-    getDadosUser(this.username).then((user) => {
+    
+    Functions.getDataUser(this.username).then((user) => {
       (this.id = user.id), (this.user = user);
     });
 
-    getRepos(this.username).then((repo) => {
+    Functions.getReposUser(this.username).then((repo) => {
       this.repos = repo;
     });
     // console.log(getDadosUser(this.username));
@@ -149,25 +151,7 @@ export default {
     },
   },
 };
-function getDadosUser(username) {
-  //   return fetch(`https://api.github.com/users/${username}/repos`, {
-  return fetch(`https://api.github.com/users/${username}`, {
-    headers: {
-      authorization: "token 3f815dc5e244fc857e9a5ab27288519382072906",
-    },
-  }).then((response) => response.json());
-}
 
-function getRepos(username) {
-  return fetch(
-    `https://api.github.com/users/${username}/repos?page=1&per_page=8`,
-    {
-      headers: {
-        authorization: "token 3f815dc5e244fc857e9a5ab27288519382072906",
-      },
-    }
-  ).then((response) => response.json());
-}
 </script>
 
 <style src="./style.scss" lang="scss"/>
