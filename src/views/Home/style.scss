@@ -1,4 +1,7 @@
-@import "@/assets/scss/_colors.scss";
+
+@import "../../assets/scss/_colors.scss";
+@import "../../assets/scss/_fonts.scss";
+
 
 :root{
     --mb-1: 0.5rem;
@@ -9,27 +12,18 @@
     --mb-6: 3rem; 
 }
 
-:root{
-    --header-height: 3rem;
-    --font-semi: 600;
-}
 
-:root{
-    --header-height: 3rem;
-    --font-semi: 600;
-}
 
 
 h1 {
     color: $preto;
 }
 
-
 .home__buttons{
     margin-top: var(--mb-2);
     margin: 0 auto;
     display: flex;
-    font-weight: var(--font-semi);
+    font-weight: $font-semi;
     justify-content: space-between;
 }
 
@@ -39,7 +33,7 @@ h1 {
     margin-bottom: 15px;
     border: 1px solid; 
     border-radius: 4px;
-    border-color: #90A4AE;
+    border-color: $color-border-1;
     font-size: 15px;
     font-weight: 400;
     line-height: 36,4px;;
@@ -48,43 +42,38 @@ h1 {
 .home__buttons button{
     width: 127px;
     height: 50px;
-    // margin: 0 auto;
     font-size: 16px;
-    color: white;
-    font-weight: 600;    
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
-
+    color:$color5;
+    font-weight: $font-semi;    
+    font-family: $font-one;
+    line-height: 22px;
 }
 
-.home__buttons #todos{
-    background-color: #344FA5;
+.home__buttons button{
+    
     border-radius: 4px;
-    border: 4px;
+    border: 4px;    
 }
-
+#todos{
+    background-color: $color-button-1;
+}
 #buscar{
-    background-color: #6FCF97;
-    border-radius: 4px;
-    border: 4px;
+    background-color: $color-button-2;
+}
+
+.home__container {
+    display: grid;
 }
 
 .home__form{
     margin-left: auto;
     margin-right: auto;
-    width: 274px;
-    
-}
-
-
-.home__container {
-    font-weight: var(--font-semi);
-    display: grid;
+    width: 274px;   
 }
 
 .home__img{
     justify-content: center;
-    display: grid;
-   
+    display: grid;   
 }
 
 .home__img img{
@@ -96,4 +85,23 @@ h1 {
 .home__img h1{
     justify-content: center;
     display: grid;
+}
+
+
+@media screen and (min-width: 769px){
+    .home__container {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .home__container {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (min-width: 1201px){
+    .home__container {
+        margin-top: 100px;
+    }
 }

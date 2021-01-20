@@ -1,37 +1,70 @@
-.users__header{
-    display: inline;   
+@import "../../assets/scss/_colors.scss";
+@import "../../assets/scss/_fonts.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.users__container {
+    justify-items: center;
+    display: grid;
+    // position: relative;
 }
 
-.users__header span{
+.submit-lente {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    border: none;
+    background: transparent;
+    outline: none;
+    margin-top: 11px;
+}
+
+
+
+.submit-line {
+    position: relative;
+}
+
+input[type="text"] {
+    padding: 0 25px;
+}
+
+.submit-line input {
+    width: 250px;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: $color-border-1;
+    text-underline-position: inherit;
+}
+.users__container .users-input {
+    width: 273px;
+    height: 35px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: $color-border-1;
+}
+
+.users__header {
+    display: inline;
+    
+}
+
+.users__header span {
     font-size: 18px;
 }
 
-.header-icon{
+.header-icon {
     margin-right: 15px;
 }
 
-.users__container{
-    justify-items: center;
-    display: grid;
-}
-
-.users__container .users-input{
-    width: 273px;
-    height: 35px;
-    border: 1px solid; 
-    border-radius: 5px;
-    border-color: #90A4AE;
-}
-
-
-.users__image{
+.users__image {
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    border: 5px solid #F2F2F2;
+    border: 5px solid $color-border-2;
 }
 
-.users__cards{
+.users__cards {
     margin: 0 auto;
     display: flex;
     justify-content: first baseline;
@@ -39,20 +72,95 @@
     align-items: center;
 }
 
-.user-name{
-    margin-left: 72px;
+.user-name {
+    margin-left: 22px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: $font-semi;
     text-align: center;
-    color: #162668;
-    
+    color: $color-font-1;
+    // font-family: $font-one;
 }
 
-.user-divider{
+.user-divider {
     border: 0.5px solid rgba(0, 0, 0, 0.5);
     width: 90%;
 }
 
-.users__group__container{
+.users__group__container {
     margin-top: 50px;
+}
+
+@media screen and (min-width: 769px) {
+    .user_container_main {
+        border: 1px solid $color-border-1;
+        margin: 50px;
+        background-color: $color7;
+    }
+
+    .users__cards {
+        justify-items: center;
+        display: grid;
+        width: 100%;
+    }
+
+    .user-name {
+        // margin-left: 22px;
+        font-size: 18px;
+        font-weight: $font-semi;
+        // text-align: center;
+        color: $color-font-1;
+        margin: 0 auto;
+        
+    }
+
+    .user-divider {
+        border: 0px solid rgba(0, 0, 0, 0.5);
+        width: 0%;
+    }
+    .users-cards {
+        border: 1px solid $color-border-1;
+        margin: 2px;
+        height: 200px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+    }
+    .users__image {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        border: 5px solid $color-border-2;
+    }
+
+    .users__group__container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+    }
+
+    .users__container {
+        justify-items: flex-end;
+        display: grid;
+        margin-top: 30px;
+        margin-right: 70px;
+    }
+    body {
+        background-color: $color6;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .users__group__container {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .users__group__container {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        width: 100%;
+    }
 }

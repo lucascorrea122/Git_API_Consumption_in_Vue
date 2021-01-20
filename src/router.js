@@ -12,12 +12,13 @@ export default new Router({
         {
             path:'/',
             name: 'home',
-            component: Home
+            component: Home,
+            
         },
         {
             path: '/users',
             name: 'users',
-            component: Users
+            component: Users,
         },
         {
             path: '/profile/:data',
