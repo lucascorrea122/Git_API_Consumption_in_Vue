@@ -1,0 +1,273 @@
+@import "../../assets/scss/_colors.scss";
+@import "../../assets/scss/_fonts.scss";
+
+
+body {
+    width: 100%;
+    margin: 0px;
+}
+.profile__image {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    border: 5px solid $color-border-3;
+    margin-top: 92px;
+}
+
+.prof__header{
+    height: 50px;
+    
+}
+.profile__header {
+    display: grid;
+    justify-items: center;
+    z-index: -2;
+    
+}
+#dois{
+    background-image: url("../../assets/profile_header_image.jpg");
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.back {
+    background-image: url("../../assets/profile_header_image.jpg");
+    z-index: 1;
+}
+
+
+.profile__name {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.profile-name {
+    margin-left: 10px;
+    // background-color: yellow;
+    font-size: 16px;
+    color: $color-font-2;
+    line-height: 16px;
+}
+
+.profile-login {
+    font-size: 24px;
+    color: $color-font-1;
+}
+
+.profile__status {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 23px;
+}
+
+.profile__status__card {
+    justify-items: center;
+    display: grid;
+    width: 100%;
+}
+
+.profile__status__name {
+    font-size: 16px;
+    color: $color-font-1;
+    font-weight: $font-semi;
+    line-height: 20px;
+    margin-top: 5px;
+}
+
+.profile-status {
+    margin-left: 7px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: $font-semi;
+    line-height: 20px;
+    color: $color-font-1;
+}
+
+.profile__tabs {
+    width: 100%;
+}
+
+.tabs__content {
+    padding: 20px;
+}
+
+.tabs__choose {
+    
+    display: flex;
+    height: 50px;
+}
+
+.profile-tabs {
+    background-color: $color3;
+    display: grid;
+    justify-items: center;
+    width: 50%;
+    cursor: pointer;
+    &.active {
+        border-bottom: 3px solid $color-border-4;
+    }
+}
+
+.tabs-itens {
+    font-size: 16px;
+    font-weight: $font-semi;
+    line-height: 22px;
+    color: $preto;
+}
+
+.profile-icon-stats {
+    color: $color-font-1;
+}
+
+.profile-icon {
+    color: $color-font-2;
+    width: 10px;
+    height: 10px;
+}
+
+.profile-icons {
+    color: $color-font-1;
+    width: 15px;
+    height: 15px;
+   
+}
+
+.profile__links {
+    margin-top: 30px;
+}
+
+.bio-title {
+    font-size: 18px;
+    font-weight: $font-semi;
+    line-height: 25px;
+    color:$color-font-1;
+}
+
+.bio-description {
+    font-size: 16px;
+    font-weight: 400;
+    color:$color-font-3;
+}
+
+.profile-city {
+    margin-top: 20px;
+}
+
+.profile-location{
+    margin-left: 13px;
+    font-size: 16px;
+    color:$color-font-1;
+    font-weight: $font-semi;
+    
+}
+.profile-website{
+    margin-top: 10px;
+}
+.repos-title{
+    font-size: 14px;
+    font-weight: $font-semi;
+    line-height: 20px;
+    color: #0366D6;
+}
+
+.repos-description{
+    margin-top: 0px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: $font-semi;
+    color: $color-font-4;
+}
+.repos-divider{
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    
+}
+
+.repos__cards{
+    // background-color: #5c97d2;
+}
+
+
+.repo-lang li{
+    margin-left: -15px;
+    font-size: 10px;
+    color:$color-font-4;
+}
+
+@media screen and (min-width: 769px){
+    .profile__container{
+        background-color: $color7;
+        margin: 100px;
+    }
+
+    .profile__main{
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+        background-image: url("../../assets/profile_header_image.jpg");
+        
+    }
+    .profile__header{
+        width: 50%;
+        display: inline-block;
+        // background-color: #0366D6;
+        // margin-top: 400px;
+    }
+    .profile__status{
+        width: 50%;
+        float: right;
+        // background-color: red;
+        // height: 100%;
+        margin-top: 150px;
+        // justify-content: left;
+        // display: flex;
+
+    }
+
+    .profile__status__card {
+        justify-items: first baseline;
+        // display: f;
+        // width: 50%;
+    }
+    #dois{
+        // width: 25%;
+        // margin-top: 40px;
+    }
+
+    .tabs__choose {
+    
+        display: block;
+        height: 50px;
+        width: 40%;
+        // background-color: #0366D6;
+        // border-right: 1px solid;
+    }
+
+    .profile__tabs {
+        display: inline-block;
+        width: 100%;
+    }
+    .tabs__content{
+        width: 60%;
+        float: right;
+        margin-top: -100px;
+    }
+    
+}
+
+
+@media screen and (min-width: 1201px){
+    .profile__status {
+        // display: flex;
+        // margin: 0 auto;
+        justify-content: space-between;
+        // margin-top: 23px;
+    }
+    
+    .profile__status__card {
+        justify-items: flex-start;
+        justify-content: left;
+    }
+    
+}
